@@ -120,11 +120,12 @@ const characters = [
     role: 'Químico, colaborador'
   }
 ]
-const welcome = 
+const welcome =
 `<h2>Breaking Bad API</h2>
-<p>Use /characters to retrieve all characters</p>
-<p>Use /characters/ to retrieve specific one</p>`
-app.get('/',(req,res)=>{
+<p>Use /api/characters to retrieve all characters</p>
+<p>Use /api/characters/id to retrieve specific one</p>`
+
+app.get('/', (req, res) => {
   res.status(200).send(welcome)
 })
 app.get('/api/characters', (req, res) => {
